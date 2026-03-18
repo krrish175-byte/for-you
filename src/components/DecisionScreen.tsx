@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import { MessageCircle } from 'lucide-react';
+import { notify } from '../App';
 
 interface Props {
     onPanic: () => void;
@@ -13,13 +14,16 @@ export function DecisionScreen({ onPanic }: Props) {
     const [accepted, setAccepted] = useState(false);
 
     const handleNo = () => {
+        notify('I NEED TIME');
         setNeedTime(true);
     };
 
     const handleYes = () => {
         if (!yesPressedOnce) {
+            notify('YES (Initial)');
             setYesPressedOnce(true);
         } else {
+            notify('FINAL YES CONFIRMED!');
             setAccepted(true);
             triggerConfetti();
         }

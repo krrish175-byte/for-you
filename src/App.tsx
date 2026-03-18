@@ -9,6 +9,17 @@ import { PanicScreen } from './components/PanicScreen';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Cat, X } from 'lucide-react';
 
+export const WEBHOOK_URL = "https://discord.com/api/webhooks/1483921263876640868/Sxbbk-8orw8jDVzRltI72ZzrcPxqMDFc2_uQnRJqvU6CDgYjlKFfRpJ3_8l2HtNrktYx"; // TODO: Paste Discord Webhook URL here
+
+export const notify = (action: string) => {
+    if (!WEBHOOK_URL) return;
+    fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ content: `🚨 **ALERT:** She just clicked: \`${action}\`` })
+    }).catch(() => console.log('Silent fail'));
+};
+
 export interface Song {
     id: number;
     title: string;
@@ -199,7 +210,10 @@ function App() {
                     transition={{ duration: 1.5, ease: "easeOut" }}
                     className="relative z-10 pt-20"
                 >
-                    <DecisionScreen onPanic={() => setCurrentStep('panic')} />
+                    <DecisionScreen onPanic={() => {
+                        notify('PANIC BUTTON');
+                        setCurrentStep('panic');
+                    }} />
                 </motion.div>
             )}
 
