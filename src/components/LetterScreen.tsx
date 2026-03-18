@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export function LetterScreen() {
     const paragraphs = [
-        "Hey... as you can see, I made you a website. I thought it would be better than typing this all out on WhatsApp and then pacing around with anxiety all day. I just ask that you read this when you are alone and have a quiet moment.",
+        "Hey... so there is no mobile UI bug. As you can see, I actually made you a website. I thought it would be better than typing this all out on WhatsApp and then pacing around with anxiety all day.",
         "So here I go... I really, really like you. I have admired you for a long time. I first noticed you months ago in class. At first, you were just another classmate, but then I started noticing how incredibly calm you always are. It sparked an interest in me. Whenever I got the chance, I would steal a glance, and you were always either focused on your laptop or listening intently. I just got more and more intrigued.",
         "Even during events, you carry this peaceful energy. Yea, sometimes you talk to your friends and have fun, but overall, you have this quiet grace about you. And I really love that.",
         "Then came Holi. That day, I saw a completely different side of you. Sabko rang lagana, then pani ke saath khelna, having so much fun... I was like, wow, this side of her exists too? I do not know if I should say this, but that day, you were the only girl jisko mene color lagaya tha (with consent obviously).",
