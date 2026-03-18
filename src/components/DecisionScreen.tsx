@@ -65,7 +65,7 @@ export function DecisionScreen({ onPanic }: Props) {
                     <div className="w-12 h-[1px] bg-[#d3d9d0] mx-auto mb-8"></div>
                     <h1 className="text-3xl md:text-4xl font-serif text-[#2c302e] mb-6 italic">Take all the time you need.</h1>
                     <p className="text-[#646b66] leading-relaxed font-light mb-10">
-                        I'm just glad I got to tell you. I will completely respect your boundaries.
+                        I am just glad I got to tell you.
                     </p>
 
                     <a
